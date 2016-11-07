@@ -32,11 +32,6 @@ class SiteController extends Controller {
                         'allow' => true,
                         'roles' => ['@'],
                     ],
-                    [
-                        'actions' => ['update'],
-                        'allow' => true,
-                        'roles' => ['autor'],
-                    ],
                 ],
             ],
             'verbs' => [
@@ -66,6 +61,10 @@ class SiteController extends Controller {
      */
     public function actionIndex() {
         return $this->render('index');
+    }
+
+    public function actionVista() {
+        return $this->redirect(Yii::$app->request->BaseUrl . '../../../frontend/web/site/blog');
     }
 
     /**

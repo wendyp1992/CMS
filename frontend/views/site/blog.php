@@ -1,5 +1,4 @@
 <?php
-
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
@@ -21,19 +20,20 @@ $cont = count($entradas);
             $Titulo = $fila['Titulo'];
             $Contenido = $fila['Contenido'];
             ?>
-             <div class="col s12 m4">
-               <div class="card small">
-<!--                    <div class="card-image">
-                      <img src="images/art.jpg">
-                    </div>-->
-                   <br>
-                        <span class="card-title blue-text"><?php echo $Titulo ?></span>
-                         <p align="center"><?php echo $Contenido ?></p>               </div>
+            <div class="col s12 m4">
+                <div class="card small">
+                    <!--                    <div class="card-image">
+                                          <img src="images/art.jpg">
+                                        </div>-->
+                    <br>
+                    <span class="card-title blue-text"><?php echo $Titulo ?></span>
+                    <p align="center"><?php echo $Contenido ?></p>              
+                </div>
             </div>
         <?php } ?>
     </div>            
     <!-- /Main -->
 
 
-  
+
 </div>

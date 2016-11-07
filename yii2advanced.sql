@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2016 a las 01:14:45
+-- Tiempo de generación: 07-11-2016 a las 18:44:46
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.5.38
 
@@ -109,19 +109,20 @@ CREATE TABLE `blog_cms` (
   `Id` int(11) NOT NULL,
   `Titulo` varchar(50) NOT NULL,
   `Contenido` text NOT NULL,
-  `Publicar` tinyint(1) NOT NULL
+  `Publicar` tinyint(1) NOT NULL,
+  `Autor` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `blog_cms`
 --
 
-INSERT INTO `blog_cms` (`Id`, `Titulo`, `Contenido`, `Publicar`) VALUES
-(17, 'SOFTWARE QA', '<div class="card-content">\r\n<p align="justify">Este documento describe una familia de herramientas que no s&oacute;lo es compatible desarrollo de software, sino que tambi&eacute;n asegura la calidad de cada software producto de los requisitos definici&oacute;n al sistema integrado.</p>\r\n<p align="justify"><a href="https://www.computer.org/csdl/trans/ts/1985/09/01702108.pdf" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1),
-(18, 'TESTING', '<div class="card-content">\r\n<p align="justify">El presente trabajo describe el proceso realizado y resultados obtenidos al estudiar la documentaci&oacute;n t&eacute;cnica de los desarrollos de software (DS) del grupo de investigaci&oacute;n en sistemas y tecnolog&iacute;as de la informaci&oacute;n (STI), grupo adscrito a la UIS.</p>\r\n<p align="justify"><a title="Leer M&aacute;s" href="http://dspace.ucuenca.edu.ec/bitstream/123456789/23835/1/2015_TIC.EC_24.pdf" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1),
-(19, 'SELENIUM', '<div class="card-content">\r\n<p align="justify">El selenio es una herramienta para la creaci&oacute;n y ejecuci&oacute;n de pruebas web automatizados y es una buena opci&oacute;n para proyectos &aacute;giles en el que se puede utilizar para la creaci&oacute;n de pruebas de aceptaci&oacute;n correspondientes a las historias de usuario de la aplicaci&oacute;n web.</p>\r\n<p align="justify"><a title="Leer M&agrave;s" href="http://dl.acm.org/citation.cfm?id=1297927&amp;dl=ACM&amp;coll=DL&amp;CFID=691175237&amp;CFTOKEN=71190589" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1),
-(20, 'MVC', '<div class="card-content">\r\n<p align="justify">Este art&iacute;culo presenta un sistema flexible de la miner&iacute;a construida sobre una la arquitectura de varios niveles. La arquitectura del sistema es dise&ntilde;ada en el patr&oacute;n de dise&ntilde;o Modelo-Vista-Controlador.</p>\r\n<p align="justify"><a title="Leer M&aacute;s" href="https://www.computer.org/csdl/proceedings/hicss/2005/2268/03/22680073c.pdf" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1),
-(21, 'HTML5', '<div class="card-content">\r\n<p align="justify">Se presenta un modelo que permite integrar directamente los nodos X3D en contenido HTML5 DOM. Este modelo trata de cumplir la promesa de la especificaci&oacute;n de HTML 5, que hace referencia a X3D.</p>\r\n<p align="justify"><a title="Leer M&aacute;s" href="http://dl.acm.org/citation.cfm?id=1559784&amp;dl=ACM&amp;coll=DL&amp;CFID=691175237&amp;CFTOKEN=71190589" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1);
+INSERT INTO `blog_cms` (`Id`, `Titulo`, `Contenido`, `Publicar`, `Autor`) VALUES
+(17, 'SOFTWARE QA', '<div class="card-content">\r\n<p align="justify">Este documento describe una familia de herramientas que no s&oacute;lo es compatible desarrollo de software, sino que tambi&eacute;n asegura la calidad de cada software producto de los requisitos definici&oacute;n al sistema integrado..</p>\r\n<p align="justify"><a href="https://www.computer.org/csdl/trans/ts/1985/09/01702108.pdf" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1, ''),
+(18, 'TESTING', '<div class="card-content">\r\n<p align="justify">El presente trabajo describe el proceso realizado y resultados obtenidos al estudiar la documentaci&oacute;n t&eacute;cnica de los desarrollos de software (DS) del grupo de investigaci&oacute;n en sistemas y tecnolog&iacute;as de la informaci&oacute;n (STI), grupo adscrito a la UIS.</p>\r\n<p align="justify"><a title="Leer M&aacute;s" href="http://dspace.ucuenca.edu.ec/bitstream/123456789/23835/1/2015_TIC.EC_24.pdf" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1, ''),
+(19, 'SELENIUM', '<div class="card-content">\r\n<p align="justify">El selenio es una herramienta para la creaci&oacute;n y ejecuci&oacute;n de pruebas web automatizados y es una buena opci&oacute;n para proyectos &aacute;giles en el que se puede utilizar para la creaci&oacute;n de pruebas de aceptaci&oacute;n correspondientes a las historias de usuario de la aplicaci&oacute;n web.</p>\r\n<p align="justify"><a title="Leer M&agrave;s" href="http://dl.acm.org/citation.cfm?id=1297927&amp;dl=ACM&amp;coll=DL&amp;CFID=691175237&amp;CFTOKEN=71190589" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1, ''),
+(20, 'MVC', '<div class="card-content">\r\n<p align="justify">Este art&iacute;culo presenta un sistema flexible de la miner&iacute;a construida sobre una la arquitectura de varios niveles. La arquitectura del sistema es dise&ntilde;ada en el patr&oacute;n de dise&ntilde;o Modelo-Vista-Controlador.</p>\r\n<p align="justify"><a title="Leer M&aacute;s" href="https://www.computer.org/csdl/proceedings/hicss/2005/2268/03/22680073c.pdf" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1, ''),
+(21, 'HTML5', '<div class="card-content">\r\n<p align="justify">Se presenta un modelo que permite integrar directamente los nodos X3D en contenido HTML5 DOM. Este modelo trata de cumplir la promesa de la especificaci&oacute;n de HTML 5, que hace referencia a X3D.</p>\r\n<p align="justify"><a title="Leer M&aacute;s" href="http://dl.acm.org/citation.cfm?id=1559784&amp;dl=ACM&amp;coll=DL&amp;CFID=691175237&amp;CFTOKEN=71190589" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1, '');
 
 -- --------------------------------------------------------
 
@@ -167,10 +168,7 @@ CREATE TABLE `profile` (
 INSERT INTO `profile` (`user_id`, `name`, `public_email`, `gravatar_email`, `gravatar_id`, `location`, `website`, `bio`, `timezone`) VALUES
 (1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(4, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -210,10 +208,7 @@ CREATE TABLE `token` (
 INSERT INTO `token` (`user_id`, `code`, `created_at`, `type`) VALUES
 (1, '4Ciq_YWlyYEZs9BHlcL32pvQBXk7nwdB', 1478301133, 0),
 (2, '8sN_eLHwxsC9pyYR-lgHPHdYah9KN8xn', 1478364095, 0),
-(3, '9DernXuj412TZednVZOyoYDlNTBc9Zy2', 1478381434, 0),
-(4, 'fzz9wM4yXAo4PiReZrcjq3_HIMZOXAET', 1478402104, 0),
-(5, '-uH1kwzL-1wG0Kw4SsETdQ_ev163t_PJ', 1478402139, 0),
-(6, 'VxBDzoIYqJ_FW2tNn5YDFfm4vBB55FOH', 1478477086, 0);
+(7, 'pHrZzrS7yDGclrzwNc8_wc1vCxFlnhN7', 1478537057, 0);
 
 -- --------------------------------------------------------
 
@@ -243,10 +238,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `username`, `email`, `password_hash`, `auth_key`, `confirmed_at`, `unconfirmed_email`, `blocked_at`, `registration_ip`, `created_at`, `updated_at`, `flags`) VALUES
 (1, 'wendy', 'wendytunegrita@gmail.com', '$2y$10$XMm6bZR3QCf1pJBfMr3Eu.aF9U1CyE/CDcIYWJqI/sKcghYW9iHEO', 'o41qPiKEY1aPOwcPnqr8RGpbRwPF_RNN', NULL, NULL, NULL, '::1', 1478300769, 1478300769, 0),
 (2, 'paola', 'wendy.paola.estupinan@gmail.com', '$2y$12$Wd3vpmpqhGMH8Zpfm8lR.OfObj2at.wCKwQV7NVHLtP7WCd2rGEuC', 'YVRo4uR7IKGKBfv4lYgnsV5v_bSdjsUe', NULL, NULL, NULL, '::1', 1478364095, 1478364095, 0),
-(3, 'hector', 'hector@gmail.com', '$2y$12$2SFc6WOpq4iTzbknNaJse.U69DTabn1FnhqVx3OH9tep4UrVo9UNa', '0L_HQI2sMFRX24IIKMQCSk5hGtCXqmF5', NULL, NULL, NULL, '::1', 1478381434, 1478381434, 0),
-(4, 'jose', 'jose@hotmail.com', '$2y$12$c.rHP31qjzTVdQyQzyLQrO0/cTe0WCtr0L8v.jzhNP/ORzXY3X/M2', 'SLWtUCNS_KOP85EPZ1zrLatVZRSHXLDV', NULL, NULL, NULL, '::1', 1478402104, 1478402104, 0),
-(5, 'diego', 'diego@gmail.com', '$2y$12$GQELSya4uRSme3.Q45DX0O4ywqXx6sThtB0ZK3IXusqUJvD4bskz2', 'nvWnc19ryvIo3yBOZOF6EzGgvpbWh5iY', NULL, NULL, NULL, '::1', 1478402138, 1478402138, 0),
-(6, 'usuario', 'usuario@usuario.com', '$2y$12$iHe2om26RaRDlsyuLGh4fuBtSoSgDqtJ6D19eILRZufSg3Cg3T2nK', 'P7-EblP84ECdA1Qtb0Adv3Z_Mbf3LFXT', NULL, NULL, NULL, '::1', 1478477086, 1478477086, 0);
+(7, 'marc', 'wendy@hotmail.com', '$2y$12$f33.2e5QYtiKJF1DP23mFu2G1M6xVxCUYAn3qi5Sga8eF3z1Ci9UG', '2C_yQfrH2qEOaUiubfwMIdA0UveVEK0y', NULL, NULL, NULL, '::1', 1478537057, 1478537057, 0);
 
 --
 -- Índices para tablas volcadas
@@ -283,7 +275,8 @@ ALTER TABLE `auth_rule`
 -- Indices de la tabla `blog_cms`
 --
 ALTER TABLE `blog_cms`
-  ADD PRIMARY KEY (`Id`);
+  ADD PRIMARY KEY (`Id`),
+  ADD UNIQUE KEY `Titulo` (`Titulo`);
 
 --
 -- Indices de la tabla `migration`
@@ -328,7 +321,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `blog_cms`
 --
 ALTER TABLE `blog_cms`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT de la tabla `social_account`
 --
@@ -338,7 +331,7 @@ ALTER TABLE `social_account`
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- Restricciones para tablas volcadas
 --

@@ -75,15 +75,16 @@ class SiteController extends Controller {
 //    }
 
     public function actionBlog() {
-       return $this->render('blog');
+        return $this->render('blog');
     }
 
     public function actionAbout() {
-        return $this->render('about');
+
+        return $this->redirect(Yii::$app->request->BaseUrl . '../../../backend/web/blog/index');
     }
 
     public function actionIndex() {
-        if (Yii::$app->user->can('admin') || Yii::$app->user->can('autor')) {
+        if (Yii::$app->user->can('admin')) {
             return $this->redirect(Yii::$app->request->BaseUrl . '../../../backend/web/');
         } else {
             return $this->render('index');
@@ -148,7 +149,6 @@ class SiteController extends Controller {
      *
      * @return mixed
      */
- 
 
     /**
      * Signs user up.

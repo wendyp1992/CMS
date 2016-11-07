@@ -11,39 +11,43 @@ use Yii;
  * @property string $Titulo
  * @property string $Contenido
  * @property integer $Publicar
+ * @property string $Autor
  */
-class blog extends \yii\db\ActiveRecord {
-
+class blog extends \yii\db\ActiveRecord
+{
     /**
      * @inheritdoc
      */
-
-    public static function tableName() {
+    public static function tableName()
+    {
         return 'blog_cms';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules() {
+    public function rules()
+    {
         return [
-            [['Titulo', 'Contenido', 'Publicar'], 'required'],
+            [['Titulo', 'Contenido', 'Publicar', 'Autor'], 'required'],
             [['Contenido'], 'string'],
             [['Publicar'], 'integer'],
-            [['Titulo'], 'string', 'max' => 50],
+            [['Titulo', 'Autor'], 'string', 'max' => 50],
+            [['Titulo'], 'unique'],
         ];
     }
 
     /**
      * @inheritdoc
      */
-    public function attributeLabels() {
+    public function attributeLabels()
+    {
         return [
             'Id' => 'ID',
             'Titulo' => 'Titulo',
             'Contenido' => 'Contenido',
             'Publicar' => 'Publicar',
+            'Autor' => 'Autor',
         ];
     }
-
 }

@@ -41,11 +41,30 @@ AppAsset::register($this);
             } else {
                 $menuItems[] = ['label' => 'Diseño', 'url' => ['/blog/index']];
                 $menuItems[] = ['label' => 'Usuarios', 'url' => ['/user/admin']];
+                $menuItems[] = [
+                    'label' => Yii::$app->user->identity->username,
+                    'items' => [
+                        [
+                            'label' => 'Perfil',
+                            'url' => ['/user/settings/profile'],
+                        ],
+                        [
+                            'label' => 'Vista Blog',
+                            'url' => ['vista'],
+                        ],
+                        [
+                            'label' => 'Salir',
+                            'url' => ['/user/security/logout'],
+                            'linkOptions' => ['data-method' => 'post']
+                        ],
+                    ],
+                ];
+
                 $menuItems[] = '<li>'
                         . Html::beginForm(['/user/security/logout'], 'post')
-                        . Html::submitButton(
-                                'Logout (' . Yii::$app->user->identity->username . ')', ['class' => 'btn-large']
-                        )
+//                        . Html::submitButton(
+//                                'Logout (' . Yii::$app->user->identity->username . ')', ['class' => 'btn-large']
+//                        )
                         . Html::endForm()
                         . '</li>';
             }
