@@ -63,15 +63,6 @@ class SiteController extends Controller {
         return $this->render('index');
     }
 
-    public function actionVista() {
-        return $this->redirect(Yii::$app->request->BaseUrl . '../../../frontend/web/site/blog');
-    }
-
-    /**
-     * Login action.
-     *
-     * @return string
-     */
     public function actionLogin() {
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();

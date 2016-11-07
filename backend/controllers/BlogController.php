@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use dektrium\user\models\User;
+use yii\filters\AccessControl;
 
 /**
  * BlogController implements the CRUD actions for blog model.
@@ -20,6 +21,7 @@ class BlogController extends Controller {
      */
     public function behaviors() {
         return [
+
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -88,9 +90,8 @@ class BlogController extends Controller {
      */
     public function actionUpdate($id) {
         $model = $this->findModel($id);
-
         $usuario = $this->verUsuario();
-        if ($usuario == $model->Autor) {
+        if (($usuario == $model->Autor) || (Yii::$app->user->can('admin'))) {
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
                 return $this->redirect(['view', 'id' => $model->Id]);
             } else {
@@ -103,15 +104,8 @@ class BlogController extends Controller {
         }
     }
 
-    /**
-     * Deletes an existing blog model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     */
     public function actionDelete($id) {
         $this->findModel($id)->delete();
-
         return $this->redirect(['index']);
     }
 

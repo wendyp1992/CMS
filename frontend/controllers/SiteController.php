@@ -83,12 +83,16 @@ class SiteController extends Controller {
         return $this->redirect(Yii::$app->request->BaseUrl . '../../../backend/web/blog/index');
     }
 
+    public function actionEscritorio() {
+        return $this->redirect(Yii::$app->request->BaseUrl . '../../../backend/web/blog/index');
+    }
+
     public function actionIndex() {
-        if (Yii::$app->user->can('admin')) {
-            return $this->redirect(Yii::$app->request->BaseUrl . '../../../backend/web/');
-        } else {
+       // if (Yii::$app->user->can('admin')) {
+        //    return $this->redirect(Yii::$app->request->BaseUrl . '../../../backend/web/');
+       // } else {
             return $this->render('index');
-        }
+      //  }
     }
 
     /**
