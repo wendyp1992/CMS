@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2016 a las 18:44:46
+-- Tiempo de generación: 07-11-2016 a las 22:08:12
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.5.38
 
@@ -321,7 +321,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `blog_cms`
 --
 ALTER TABLE `blog_cms`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT de la tabla `social_account`
 --
@@ -331,7 +331,7 @@ ALTER TABLE `social_account`
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- Restricciones para tablas volcadas
 --
