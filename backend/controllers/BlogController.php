@@ -105,8 +105,15 @@ class BlogController extends Controller {
     }
 
     public function actionDelete($id) {
-        $this->findModel($id)->delete();
-        return $this->redirect(['index']);
+        $model = $this->findModel($id);
+
+        $usuario = $this->verUsuario();
+        if (($usuario == $model->Autor) || (Yii::$app->user->can('admin'))) {
+            $this->findModel($id)->delete();
+            return $this->redirect(['index']);
+        } else {
+            return $this->redirect(['error']);
+        }
     }
 
     /**

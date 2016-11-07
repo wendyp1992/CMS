@@ -21,10 +21,10 @@ $cont = count($entradas);
             $Contenido = $fila['Contenido'];
             ?>
             <div class="col s12 m4">
-                <div class="card small">
-                    <!--                    <div class="card-image">
-                                          <img src="images/art.jpg">
-                                        </div>-->
+                <div class="card">
+                    <div class="card-image">
+                        <img src="<?php echo Yii::$app->request->baseUrl; ?>/images/art.jpg">
+                    </div>
                     <br>
                     <span class="card-title blue-text"><?php echo $Titulo ?></span>
                     <p align="center"><?php echo $Contenido ?></p>              
@@ -33,7 +33,4 @@ $cont = count($entradas);
         <?php } ?>
     </div>            
     <!-- /Main -->
-
-
-
 </div>
