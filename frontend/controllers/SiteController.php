@@ -13,6 +13,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use yii\data\Pagination;
 
 /**
  * Site controller
@@ -38,7 +39,6 @@ class SiteController extends Controller {
                         'allow' => true,
                         'roles' => ['@'],
                     ],
-                    
                 ],
             ],
             'verbs' => [
@@ -73,17 +73,17 @@ class SiteController extends Controller {
 //    public function actionIndex() {
 //        return $this->render('index');
 //    }
-    
-        public function actionBlog() {
-        return $this->render('blog');
+
+    public function actionBlog() {
+       return $this->render('blog');
     }
-    
-          public function actionAbout() {
+
+    public function actionAbout() {
         return $this->render('about');
     }
 
     public function actionIndex() {
-        if (Yii::$app->user->can('admin')||Yii::$app->user->can('autor')) {
+        if (Yii::$app->user->can('admin') || Yii::$app->user->can('autor')) {
             return $this->redirect(Yii::$app->request->BaseUrl . '../../../backend/web/');
         } else {
             return $this->render('index');
@@ -148,10 +148,7 @@ class SiteController extends Controller {
      *
      * @return mixed
      */
-
-    public function actionBlogP() {
-        return $this->render('blogP');
-    }
+ 
 
     /**
      * Signs user up.

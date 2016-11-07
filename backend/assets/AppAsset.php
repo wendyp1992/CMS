@@ -18,7 +18,6 @@ class AppAsset extends AssetBundle {
     ];
     public $js = [
         'js/main.js',
-        'tinymce/jquery.tinymce.min.js',
         'tinymce/tinymce.min.js',
     ];
     public $depends = [

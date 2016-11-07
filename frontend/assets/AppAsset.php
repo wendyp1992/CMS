@@ -17,6 +17,9 @@ class AppAsset extends AssetBundle {
         'css/materialize.css',
     ];
     public $js = [
+        'js/materialize.min.js',
+        'js/materialize.js',
+        'js/main.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

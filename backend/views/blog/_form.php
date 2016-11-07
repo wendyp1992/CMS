@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Titulo')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'Contenido')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'Contenido')->textarea(['rows' => 6, "id"=>'Contenido']) ?>
 
     <?= $form->field($model, 'Publicar')->textInput() ?>
 

@@ -21,20 +21,14 @@ $cont = count($entradas);
             $Titulo = $fila['Titulo'];
             $Contenido = $fila['Contenido'];
             ?>
-             <div class="col s12 m12">
-               <div class="card ">
-            <!--        <div class="card-image">
-                        <img src="images/banner.jpg">
+             <div class="col s12 m4">
+               <div class="card small">
+<!--                    <div class="card-image">
+                      <img src="images/art.jpg">
                     </div>-->
-                   <div class="card-content">
+                   <br>
                         <span class="card-title blue-text"><?php echo $Titulo ?></span>
-                        <p><?php echo $Contenido ?></p>
-                    </div>
-               <!--      <div class="card-action">
-                        <a href='../about/'>Leer Más</a>
-                    </div> -->
-
-                </div>
+                         <p align="center"><?php echo $Contenido ?></p>               </div>
             </div>
         <?php } ?>
     </div>            

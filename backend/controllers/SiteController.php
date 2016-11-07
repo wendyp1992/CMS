@@ -8,6 +8,7 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
 use dektrium\user\filters\AccessRule;
+use yii\data\Pagination;
 
 /**
  * Site controller
