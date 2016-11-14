@@ -61,13 +61,6 @@ AppAsset::register($this);
                         ],
                     ],
                 ];
-//                $menuItems[] = '<li>'
-//                        . Html::beginForm(['/site/logout'], 'post')
-//                        . Html::submitButton(
-//                                'Logout (' . Yii::$app->user->identity->username . ')', ['class' => 'btn-large']
-//                        )
-//                        . Html::endForm()
-//                        . '</li>';
             }
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],

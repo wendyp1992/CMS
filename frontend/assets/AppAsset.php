@@ -11,6 +11,7 @@ class AppAsset extends AssetBundle {
 
     public $basePath = '@webroot';
     public $baseUrl = '@web';
+   // public $sourcePath = '@bower/principal/';
     public $css = [
         'css/site.css',
         'css/materialize.min.css',
@@ -20,6 +21,7 @@ class AppAsset extends AssetBundle {
         'js/materialize.min.js',
         'js/materialize.js',
         'js/main.js',
+
     ];
     public $depends = [
         'yii\web\YiiAsset',
