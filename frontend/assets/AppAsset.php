@@ -11,17 +11,22 @@ class AppAsset extends AssetBundle {
 
     public $basePath = '@webroot';
     public $baseUrl = '@web';
-   // public $sourcePath = '@bower/principal/';
+//  public $sourcePath = '@bower/principal/';
     public $css = [
         'css/site.css',
-        'css/materialize.min.css',
-        'css/materialize.css',
+        'css/animate.css',
+        'css/bootstrap.css',
+        'css/owl.carousel.css',
+        'css/style.css',
     ];
     public $js = [
-        'js/materialize.min.js',
-        'js/materialize.js',
-        'js/main.js',
-
+        'js/easing.js',
+        'js/jquery.corner.js',
+        'js/jquery.min.js',
+        'js/jquery.mixitup.min.js',
+        'js/move-top.js',
+        'js/owl.carousel.js',
+        'js/wow.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
