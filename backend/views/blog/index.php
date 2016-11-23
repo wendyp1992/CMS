@@ -6,15 +6,16 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Blogs';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'Entradas';
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="blog-index">
+<div class="container">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <center><h1><?= Html::encode($this->title) ?></h1></center>
 
     <p>
-        <?= Html::a('Create Blog', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Crear Entrada', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -30,4 +31,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+</div>
 </div>

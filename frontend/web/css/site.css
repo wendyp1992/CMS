@@ -179,7 +179,7 @@ video.responsive-video {
 }
 
 .card.medium {
-  height: 400px;
+  height: 450px;
 }
 
 .card.large {
@@ -210,7 +210,7 @@ video.responsive-video {
 }
 
 .card .card-content {
-  padding: 20px;
+  padding: 0px;
   border-radius: 0 0 2px 2px;
 }
 
@@ -263,3 +263,4 @@ video.responsive-video {
   cursor: pointer;
   display: block;
 }
+

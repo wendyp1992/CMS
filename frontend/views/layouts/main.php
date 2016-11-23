@@ -27,16 +27,10 @@ AppAsset::register($this);
         <!-- Custom Theme files -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-    </script>
     <!---- animated-css ---->
     <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
     <script type="text/javascript" src="js/jquery.corner.js"></script> 
     <script src="js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-    <!---- animated-css ---->
-    <!---- start-smoth-scrolling---->
     <script type="text/javascript" src="js/move-top.js"></script>
     <script type="text/javascript" src="js/easing.js"></script>
     <?= Html::csrfMetaTags() ?>
@@ -86,7 +80,7 @@ AppAsset::register($this);
                                 ];
                             }
                             echo Nav::widget([
-                                'options' => ['class' => 'navbar-nav navbar-right'],
+                                'options' => ['class' => ''],
                                 'items' => $menuItems,
                             ]);
 
