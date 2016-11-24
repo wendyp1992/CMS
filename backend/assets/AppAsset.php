@@ -21,7 +21,7 @@ class AppAsset extends AssetBundle {
     public $js = [
         'js/main.js',
         'tinymce/tinymce.min.js',
-                'js/easing.js',
+        'js/easing.js',
         'js/jquery.corner.js',
         'js/jquery.min.js',
         'js/jquery.mixitup.min.js',

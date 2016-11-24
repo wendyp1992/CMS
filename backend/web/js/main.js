@@ -1,4 +1,9 @@
 $(document).ready(function () {
+    $(document).ready(function () {
+        $('.carousel').carousel();
+    });
+});
+$(document).ready(function () {
     tinymce.init({
         selector: 'textarea',
         height: 500,

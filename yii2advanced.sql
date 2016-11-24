@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2016 a las 22:08:12
+-- Tiempo de generación: 23-11-2016 a las 21:22:45
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.5.38
 
@@ -122,7 +122,8 @@ INSERT INTO `blog_cms` (`Id`, `Titulo`, `Contenido`, `Publicar`, `Autor`) VALUES
 (18, 'TESTING', '<div class="card-content">\r\n<p align="justify">El presente trabajo describe el proceso realizado y resultados obtenidos al estudiar la documentaci&oacute;n t&eacute;cnica de los desarrollos de software (DS) del grupo de investigaci&oacute;n en sistemas y tecnolog&iacute;as de la informaci&oacute;n (STI), grupo adscrito a la UIS.</p>\r\n<p align="justify"><a title="Leer M&aacute;s" href="http://dspace.ucuenca.edu.ec/bitstream/123456789/23835/1/2015_TIC.EC_24.pdf" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1, ''),
 (19, 'SELENIUM', '<div class="card-content">\r\n<p align="justify">El selenio es una herramienta para la creaci&oacute;n y ejecuci&oacute;n de pruebas web automatizados y es una buena opci&oacute;n para proyectos &aacute;giles en el que se puede utilizar para la creaci&oacute;n de pruebas de aceptaci&oacute;n correspondientes a las historias de usuario de la aplicaci&oacute;n web.</p>\r\n<p align="justify"><a title="Leer M&agrave;s" href="http://dl.acm.org/citation.cfm?id=1297927&amp;dl=ACM&amp;coll=DL&amp;CFID=691175237&amp;CFTOKEN=71190589" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1, ''),
 (20, 'MVC', '<div class="card-content">\r\n<p align="justify">Este art&iacute;culo presenta un sistema flexible de la miner&iacute;a construida sobre una la arquitectura de varios niveles. La arquitectura del sistema es dise&ntilde;ada en el patr&oacute;n de dise&ntilde;o Modelo-Vista-Controlador.</p>\r\n<p align="justify"><a title="Leer M&aacute;s" href="https://www.computer.org/csdl/proceedings/hicss/2005/2268/03/22680073c.pdf" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1, ''),
-(21, 'HTML5', '<div class="card-content">\r\n<p align="justify">Se presenta un modelo que permite integrar directamente los nodos X3D en contenido HTML5 DOM. Este modelo trata de cumplir la promesa de la especificaci&oacute;n de HTML 5, que hace referencia a X3D.</p>\r\n<p align="justify"><a title="Leer M&aacute;s" href="http://dl.acm.org/citation.cfm?id=1559784&amp;dl=ACM&amp;coll=DL&amp;CFID=691175237&amp;CFTOKEN=71190589" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1, '');
+(21, 'HTML5', '<div class="card-content">\r\n<p align="justify">Se presenta un modelo que permite integrar directamente los nodos X3D en contenido HTML5 DOM. Este modelo trata de cumplir la promesa de la especificaci&oacute;n de HTML 5, que hace referencia a X3D.</p>\r\n<p align="justify"><a title="Leer M&aacute;s" href="http://dl.acm.org/citation.cfm?id=1559784&amp;dl=ACM&amp;coll=DL&amp;CFID=691175237&amp;CFTOKEN=71190589" target="_blank">Leer M&aacute;s</a></p>\r\n</div>', 1, ''),
+(22, 'hola', '<p>skdasd</p>', 1, 'wendy');
 
 -- --------------------------------------------------------
 
@@ -166,7 +167,7 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`user_id`, `name`, `public_email`, `gravatar_email`, `gravatar_id`, `location`, `website`, `bio`, `timezone`) VALUES
-(1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(1, 'Wendy Paola Estupiñan', 'wendy.paola.estupinan@gmail.com', 'wendy.paola.estupinan@gmail.com', '767630de44edbefadda0d2357b62e738', 'Esmeraldas - Atacames', 'http://www.mundogya.com/', '', 'Pacific/Apia'),
 (2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (7, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
@@ -321,7 +322,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT de la tabla `blog_cms`
 --
 ALTER TABLE `blog_cms`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT de la tabla `social_account`
 --
