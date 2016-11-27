@@ -39,7 +39,6 @@ AppAsset::register($this);
 </head>
 <body>
     <?php $this->beginBody() ?>
-
     <div class="top-nav">
         <div id="home" class="header wow bounceInDown" data-wow-delay="0.4s">
             <div class="top-header">
@@ -102,10 +101,13 @@ AppAsset::register($this);
             ])
             ?>
             <?= Alert::widget() ?>
+            <div class="container">
             <?= $content ?>
         </div>
+
     </div>
 
+ </div>
     <footer class="footer">
 <!--                <h4><span>MUNDOGYA</span></h4>
                 <p><div class="map-icon1"> </div>Eugenio Espejo, Santa Cruz</p>
@@ -114,6 +116,7 @@ AppAsset::register($this);
     </footer>
 
     <?php $this->endBody() ?>
+       
 </body>
 </html>
 <?php $this->endPage() ?>

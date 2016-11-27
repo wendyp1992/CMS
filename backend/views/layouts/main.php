@@ -2,7 +2,6 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-
 use backend\assets\AppAsset;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
@@ -54,14 +53,12 @@ AppAsset::register($this);
                                 <?php
                                 $menuItems = [
                                     ['label' => 'Inicio', 'url' => ['/']],
+                                    ['label' => 'Inicio', 'url' => ['/'], 'visible' => Yii::$app->user->can('admin')],
                                 ];
 
                                 if (Yii::$app->user->isGuest) {
                                     $menuItems[] = ['label' => 'Login', 'url' => ['/user/security/login']];
                                 } else {
-                                    if (Yii::$app->user->can('admin')) {
-                                        $menuItems[] = ['label' => 'Usuarios', 'url' => ['/user/admin']];
-                                    }
                                     $menuItems[] = ['label' => 'Diseño', 'url' => ['/blog/index']];
                                     $menuItems[] = [
                                         'label' => Yii::$app->user->identity->username,
@@ -105,11 +102,11 @@ AppAsset::register($this);
 
 
             <div>
-                <?=
-                Breadcrumbs::widget([
-                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-                ])
-                ?>
+<?=
+Breadcrumbs::widget([
+    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+])
+?>
                 <?= Alert::widget() ?>
                 <?= $content ?>
             </div>
@@ -121,7 +118,7 @@ AppAsset::register($this);
             </div>
         </footer>
 
-        <?php $this->endBody() ?>
+<?php $this->endBody() ?>
     </body>
 </html>
 <?php $this->endPage() ?>

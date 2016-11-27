@@ -4,8 +4,6 @@
 use yii\helpers\Html;
 use yii\db\Command;
 
-
-
 $this->title = 'Blog de Noticias';
 //$this->params['breadcrumbs'][] = $this->title;
 $entradas = Yii::$app->db->createCommand('SELECT Titulo, Contenido from blog_cms where Publicar=\'1\'')->queryAll();

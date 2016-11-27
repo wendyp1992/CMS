@@ -34,14 +34,15 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
- 
-      'urlManager' => [
-      'enablePrettyUrl' => true,
-      'showScriptName' => false,
-      'rules' => [
-      ],
-      ],
-    
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+                ['class' => 'yii\rest\UrlRule',
+                    'pluralize' => false,
+                    'controller' => 'api/default'],
+            ],
+        ],
     ],
     'modules' => [
         'user' => [
@@ -52,6 +53,9 @@ return [
             'admins' => ['admin']
         ],
         'rbac' => 'dektrium\rbac\RbacWebModule',
+        'api' => [
+            'class' => 'app\modules\api\ApiModule',
+        ],
     ],
     'params' => $params,
 ];

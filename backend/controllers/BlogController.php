@@ -10,23 +10,25 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use dektrium\user\models\User;
 use yii\filters\AccessControl;
+use yii\rest\ActiveController;
 
 /**
  * BlogController implements the CRUD actions for blog model.
  */
 class BlogController extends Controller {
+    public $modelClass = 'backend\models\blog';
 
     /**
      * @inheritdoc
      */
     public function behaviors() {
         return [
-
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
                 ],
+               
             ],
         ];
     }
